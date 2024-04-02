@@ -1,15 +1,12 @@
 import { useEffect , useState } from "react" ; 
 
 import data from "../data/products.json" ; 
-import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 
-
-export const ItemListContainer = () => {
-    const [ products , setProducts ] = useState([]);
+export const ItemDetailContainer = () => {
+    const [ product , setProduct ] = useState(null);
 
     const { id } = useParams();
-
 
     useEffect(() => {
         const get = new Promise((resolve, reject) => {
@@ -17,19 +14,17 @@ export const ItemListContainer = () => {
         });
 
         get.then((data)=>{
-            if(!id){
-                setProducts(data);
-            }else{
-                const filtered = data.filter((p) => p.category === id);
-                setProducts(filtered)
-            }
-            
+            const filter = data.find(p => p.id === Number(id));
+            setProduct(filter);
         });
     }, [id]);
 
+    if(!product) return <div>Loading..</div>;
+
 return (
 <>
-<ItemList products={products}/>
+<h1>{product.name}</h1>
+<img src={product.pictureUrl} alt="Imagen producto"/>
 </> 
 );
 };

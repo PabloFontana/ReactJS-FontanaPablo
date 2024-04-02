@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.411);
   height: 100vh;
 }
 
@@ -14,3 +14,4 @@
 .cartNav{
   padding: 5px;
 }
+
