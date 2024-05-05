@@ -5,6 +5,7 @@
     "category" : "remeras",
     "description" : "Remera de algodon",
     "price" : 9000 ,
+    "stock" : 30 ,
     "pictureUrl" : "https://images.unsplash.com/photo-1564859228273-274232fdb516?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 }, 
 {
@@ -12,6 +13,7 @@
     "id" : 2 ,
     "category" : "calzado",
     "description" : "Zapatillas urbanas",
+    "stock" : 15 ,
     "price" : 18000 ,
     "pictureUrl" : "https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 }, 
@@ -20,6 +22,7 @@
     "id" : 3 ,
     "category" : "pantalones",
     "description" : "Pantalon beige ",
+    "stock" : 20 ,
     "price" : 13000 ,
     "pictureUrl" : "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 }

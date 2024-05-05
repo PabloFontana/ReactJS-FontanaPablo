@@ -1,30 +1,32 @@
-import { useEffect , useState } from "react" ; 
+import { useEffect, useState } from "react";
 
-import data from "../data/products.json" ; 
+import data from "../data/products.json";
 import { useParams } from "react-router-dom";
+import { ItemDetail } from "./ItemDetail/ItemDetail";
+
+import { getFirestore, getDoc, doc } from "firebase/firestore";
 
 export const ItemDetailContainer = () => {
-    const [ product , setProduct ] = useState(null);
+  const [product, setProduct] = useState(null);
 
-    const { id } = useParams();
+  const { id } = useParams();
 
-    useEffect(() => {
-        const get = new Promise((resolve, reject) => {
-            setTimeout(() => resolve(data), 2000);
-        });
+  useEffect(() => {
+    const db = getFirestore();
 
-        get.then((data)=>{
-            const filter = data.find(p => p.id === Number(id));
-            setProduct(filter);
-        });
-    }, [id]);
+    const refDoc = doc( db, 'items', id );
 
-    if(!product) return <div>Loading..</div>;
+    getDoc(refDoc).then((snapshot) =>{
+      setProduct({ id:snapshot.id , ...snapshot.data() });
+    });
+  }, [id]);
 
-return (
-<>
-<h1>{product.name}</h1>
-<img src={product.pictureUrl} alt="Imagen producto"/>
-</> 
-);
+  if (!product) return <div>Loading..</div>;
+
+    return (
+    <div>
+    <ItemDetail {...product}/>
+      
+    </div>
+  );
 };
