@@ -15,5 +15,3 @@ export const Item = ({ product }) => (
     </Card.Body>
     </Card>
 )
-
-

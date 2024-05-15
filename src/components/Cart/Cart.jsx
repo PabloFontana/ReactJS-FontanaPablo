@@ -19,7 +19,7 @@ const initialValues = {
 export const Cart = () => {
     const [values, setValues] = useState(initialValues);
 
-    const { items , clear } = useContext (CartContext);
+    const { items , clear , removeItem} = useContext (CartContext);
 
 
     const total = () => items.reduce((acc , i) => acc + i.quantity * i.price, 0);
@@ -55,7 +55,8 @@ export const Cart = () => {
             
     });
     };
-
+    const handleClear = () => clear()
+    const handleRemove = (id) => removeItem(id);
 
     return(
         <Container>
@@ -66,11 +67,13 @@ export const Cart = () => {
                             <li>Producto: {i.title} </li>
                             <li>Cantidad: {i.quantity} </li> 
                             <li>${i.price} </li>
+                            <li onClick={() => handleRemove (i.id)}>Eliminar</li>
                         </ul>
                         );
             })}
             <div> 
                 <h3>Total: {total()}</h3>
+                <button onClick={handleClear}>Limpiar carrito</button>
             </div>
             {items?.length > 0 && (
                 <form>
@@ -87,24 +90,3 @@ export const Cart = () => {
         </Container>
     );
 };
-
-
-{/* 
-export const Cart = () => {
-    const {cart, clearCart , totalQuantity, total, CartItem} = useContext (CartContext);
-
-    if(totalQuantity === 0) {
-        return(
-            <div>
-                <h1>No hay items en el carrito</h1>
-                <Link to='/'> Ir a Productos </Link>
-            </div>
-        )
-    }
-        <div>
-            {cart.map(p => <CartItem key={p.id} {...p}/>) }
-            <h3>Total: ${total}</h3>
-            <button onClick={()=> clearCart()}>Vaciar carrito</button>
-            <Link to='/checkout'>Checkout</Link>
-        </div>
-         */}
