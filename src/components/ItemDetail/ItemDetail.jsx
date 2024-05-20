@@ -13,11 +13,11 @@ export const ItemDetail = (product) =>{
     };
 
  return(
-    <div>
+    <div className="itemDetail">
         {<h1>{product.title}</h1>}
         <img 
         src={product.image}
-        style={{height: 500 , width: "auto" }}
+        className="ImgDetail"
         alt={product.title}
         />
         <p>{product.description}</p>

@@ -7,7 +7,7 @@ import { CartWidget } from './CartWidget';
 export const NavBar = () => {
   return (
     <>
-      <Navbar bg="light" data-bs-theme="light">
+      <Navbar className='NavBar' data-bs-theme="light">
         <Container>
           <Navbar.Brand to="/" as={NavLink}>
             Tu Estilo

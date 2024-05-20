@@ -3,10 +3,16 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.411);
-  height: 100vh;
+  height: 100%;
+
+}
+body{
+  background-color: rgba(93, 76, 114, 0.411);
 }
 
+.NavBar{
+  background-color: rgb(230, 224, 250);
+}
 .titulo2{
   color: rgb(245, 241, 17);
 }
@@ -15,3 +21,70 @@
   padding: 5px;
 }
 
+
+.ListCards{
+  
+  width: 80%;
+  height: 100%; 
+  background-color: rgb(230, 224, 250);
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.Cards{
+  width: 250px;
+  height: 100;
+  border: solid 3px rgba(0, 0, 0, 0.664);
+  text-align: center;
+  line-height: 20px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.ImgCards{
+  width: 205px;
+  margin: 5px;
+  height: 255px;
+  border-radius: 5px;
+}
+
+.bodyCards{
+  width: 100%;
+  font-size: 13px;
+  
+}
+
+.ButtonCards{
+  width: 60%;
+  font-size: 15px;
+  background-color: rgba(23, 0, 128, 0.418);
+  border: solid 1px black ;
+  margin: 5px;
+  
+}
+
+.itemDetail{
+  width: 60%;
+  font-size: 18px;
+  background-color: rgba(23, 0, 128, 0.418);
+  border: solid 3px rgba(0, 0, 0, 0.664);
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+.ImgDetail{
+  width: 255px;
+  margin: 5px;
+  height: 335px;
+  border-radius: 5px;
+
+}
