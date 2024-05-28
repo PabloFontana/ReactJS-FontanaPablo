@@ -34,6 +34,7 @@ body{
   justify-items: center;
   justify-content: center;
   margin-top: 10px;
+ 
 }
 
 .Cards{
@@ -44,6 +45,9 @@ body{
   line-height: 20px;
   border-radius: 10px;
   margin: 10px;
+  align-items: center;
+
+
 }
 
 .ImgCards{
@@ -55,16 +59,18 @@ body{
 
 .bodyCards{
   width: 100%;
-  font-size: 13px;
+  font-size: 12px;
+  
   
 }
 
 .ButtonCards{
-  width: 60%;
+  
   font-size: 15px;
   background-color: rgba(23, 0, 128, 0.418);
   border: solid 1px black ;
-  margin: 5px;
+  margin-top: 10px;
+
   
 }
 

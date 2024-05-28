@@ -20,10 +20,12 @@ export const ItemCount = ({ onAdd, stock }) =>{
 
     return(
         <div>
-            <div onClick={handleDecrease}>-</div>
+            <button onClick={handleDecrease}>-</button>
             <input type="number" value={quantity} readOnly/>
-            <div onClick={handleIncrease}>+</div>
+            <button onClick={handleIncrease}>+</button>
+            <div>
             <button type="button" onClick={handleAdd}>Agregar al carrito</button>
+            </div>
         </div>
     );
 

@@ -67,12 +67,12 @@ export const Cart = () => {
                             <li>Producto: {i.title} </li>
                             <li>Cantidad: {i.quantity} </li> 
                             <li>${i.price} </li>
-                            <li onClick={() => handleRemove (i.id)}>Eliminar</li>
+                            <button onClick={() => handleRemove (i.id)}>Eliminar</button>
                         </ul>
                         );
             })}
             <div> 
-                <h3>Total: {total()}</h3>
+                <h3>Total: ${total()}</h3>
                 <button onClick={handleClear}>Limpiar carrito</button>
             </div>
             {items?.length > 0 && (
